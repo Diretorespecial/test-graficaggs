@@ -1,0 +1,174 @@
+/* ======= Reset básico ======= */
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  background: #f5f9fc; /* fundo suave azul-claro */
+}
+
+/* Container das opções */
+#receituarioTipo {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 por linha */
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Cada opção */
+.receita-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #006ad0;
+  background: white;
+  color: #006ad0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-size: 1rem;
+  user-select: none;
+}
+
+/* Quando selecionada */
+.receita-option.active {
+  background: #006ad0;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+
+/* ======= Layout principal ======= */
+.conatiner {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ======= Cabeçalho ======= */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.header img {
+  max-width: 200px;
+  height: auto;
+}
+
+.user {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #3498db;
+}
+
+/* ======= Formulário ======= */
+form {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #3498db;
+}
+
+/* ======= Bloco de resultados ======= */
+.results {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #3498db;
+}
+
+/* ======= Avisos ======= */
+#avisos {
+  background: #eaf4fc;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+/* ======= Inputs e Selects ======= */
+input, select, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Remove a seta padrão do select */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+  background-image: none;
+}
+
+/* ======= Botão ======= */
+button {
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* ======= Responsividade ======= */
+@media screen and (max-width: 768px) {
+  .header img {
+    max-width: 150px;
+  }
+  .user img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .header img {
+    max-width: 120px;
+  }
+  .user img {
+    width: 50px;
+    height: 50px;
+  }
+  #avisos {
+    height: auto;
+  }
+}
